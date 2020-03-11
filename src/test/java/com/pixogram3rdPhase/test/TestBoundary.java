@@ -1,0 +1,66 @@
+package com.pixogram3rdPhase.test;
+
+import static org.junit.Assert.assertEquals;
+
+import static org.junit.Assert.assertNotNull;
+
+import org.junit.Test;
+
+import com.pixogram3rdPhase.pixogram3rdPhase.model.User;
+
+
+
+public class TestBoundary {
+
+	 @Test
+	    public void testpasswordLength()
+	    {
+	        User user=new User();
+	        user.setUserId(1);
+			user.setUserFirstName("meghana");
+			user.setUserLastName("g");
+			user.setUserName("meghana1234");
+			user.setUserEmail("example@gmail.com");
+			user.setUserPassword("meghana12");
+			user.setProfilePicture("https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png");
+
+
+	        int passwordLength=10;
+	assertEquals(passwordLength,user.getUserPassword().length());
+
+
+	    }
+	 
+	  @Test
+	    public void testEmail()
+	    {
+	        User user=new User();
+	        user.setUserId(1);
+			user.setUserFirstName("meghana");
+			user.setUserLastName("g");
+			user.setUserName("meghana1234");
+			user.setUserEmail("example@gmail.com");
+			user.setUserPassword("meghana12");
+			user.setProfilePicture("https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png");
+	        assertNotNull(user.getUserEmail());
+
+
+	    }
+	  
+	  @Test
+	    public void testUserName()
+	    {
+		  User user=new User();
+	        user.setUserId(1);
+			user.setUserFirstName("meghana");
+			user.setUserLastName("g");
+			user.setUserName("meghana1234");
+			user.setUserEmail("example@gmail.com");
+			user.setUserPassword("meghana12");
+			user.setProfilePicture("https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png");
+	        assertNotNull(user.getUserName());
+
+	    }
+
+	
+}
